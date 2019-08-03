@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 501.501, 391.14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 21.5775, 0 )
+scale = Vector2( 816.292, 50 )
+texture = SubResource( 1 )
