@@ -3,6 +3,7 @@ extends KinematicBody2D
 const MOVE_SPEED = 500
 const AIR_SPEED_MULTIPLIER = 0.75
 const JUMP_FORCE = 500
+const SHORT_HOP_FORCE = 400
 const WALL_JUMP_FORCE = 300
 const GRAVITY = 1400
 const MAX_FALL_SPEED = 700
@@ -23,18 +24,28 @@ var wall_normal = 0
 
 var is_fastfalling = false
 
+var jump_timer = 0
+
+# Melee states to work on
+# idle
+# jumpsquat
+# running
+# dashing
+# jumping
+# double jumping
+
 
 func _physics_process(delta):
- 
-    var move_dir := Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+    
     var should_apply_gravity = true
     
-    var ground_speed = MOVE_SPEED * AIR_SPEED_MULTIPLIER if !is_on_floor() else MOVE_SPEED
-    velocity.x = move_dir * ground_speed
+    calculate_x_velocity()
     
     if Input.is_action_just_pressed("crouch"):
+        handle_down_press()
         if !snap and velocity.y > 0:
             is_fastfalling = true
+            
     
     if Input.is_action_just_pressed("jump"):
         if snap:
@@ -45,6 +56,11 @@ func _physics_process(delta):
             has_double_jumped = true
             # double jump cancels fastfall
             is_fastfalling = false
+    
+    if Input.is_action_just_released("jump"):
+        if !has_double_jumped:
+            if velocity.y < -300:
+                velocity.y = SHORT_HOP_FORCE
         
     if was_on_wall_counter < 5:
         if wall_normal != 0:
@@ -131,6 +147,16 @@ func do_wall_jump(wall_jump_dir):
     velocity.x += wall_jump_dir 
     velocity.y = -JUMP_FORCE
     
-    
-            
+func jump(time_held):
+    if time_held > 3:
+        velocity.y = -JUMP_FORCE
+    else:
+        velocity.y = -SHORT_HOP_FORCE
 
+func calculate_x_velocity():
+    var move_dir := Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+    
+    var ground_speed = MOVE_SPEED * AIR_SPEED_MULTIPLIER if !is_on_floor() else MOVE_SPEED
+    velocity.x = move_dir * ground_speed
+
+func handle_jump_press
