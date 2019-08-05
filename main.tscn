@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tilesheet/tilesheet_complete.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -51,7 +51,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 27.8157 )
 
 [sub_resource type="Animation" id=5]
@@ -73,7 +73,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "jump"
-length = 0.9
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -82,10 +82,27 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 40, 40, 41, 42, 43, 44, 45, 46, 47, 48, 52 ]
+"values": [ 43, 44, 45, 46, 47, 48, 52 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "squat"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42 ]
 }
 
 [node name="Node2D" type="Node2D"]
@@ -104,16 +121,17 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
 position = Vector2( 1, 0 )
 texture = ExtResource( 3 )
 vframes = 9
 hframes = 8
-frame = 10
+frame = 48
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 anims/idle = SubResource( 5 )
 anims/jump = SubResource( 6 )
+anims/squat = SubResource( 7 )
 anims/walk = ExtResource( 4 )
