@@ -1,0 +1,383 @@
+0000    DeadDown    Standard downward death
+0001    DeadLeft    Standard leftward death
+0002    DeadRight    Standard rightward death
+0003    DeadUp    Upward death used in 1P "Team Kirby", etc.
+0004    DeadUpStar    Standard Star KO
+0005    DeadUpStarIce    Star KO while encased in ice (Freezie)
+0006    DeadUpFall    64-esque front fall, unused, I believe
+0007    DeadUpFallHitCamera
+0008    DeadUpFallHitCameraFlat
+0009    DeadUpFallIce
+000A    DeadUpFallHitCameraIce
+000B    Sleep    "Nothing" state, probably - it is the state Shiek/Zelda is in when their counterpart is the one currently playing
+000C    Rebirth    Entering on halo
+000D    RebirthWait    Waiting on halo
+000E    Wait    Standing state
+000F    WalkSlow
+0010    WalkMiddle
+0011    WalkFast
+0012    Turn
+0013    TurnRun
+0014    Dash
+0015    Run
+0016    RunDirect
+0017    RunBrake
+0018    KneeBend    Pre-jump animation
+0019    JumpF    First jump forward
+001A    JumpB    First jump backward
+001B    JumpAerialF    Aerial jump forward
+001C    JumpAerialB    Aerial jump backward
+001D    Fall    Falling straight down
+001E    FallF    Falling with forward DI
+001F    FallB    Falling with backward DI
+0020    FallAerial    Falling after the second jump
+0021    FallAerialF    Falling after the second jump with forward DI
+0022    FallAerialB    Falling after the second jump with backward DI
+0023    FallSpecial    Special fall after UpB or airdodge
+0024    FallSpecialF    Special fall with forward DI
+0025    FallSpecialB    Special fall with backward DI
+0026    DamageFall    Tumbling
+0027    Squat    Going from stand to crouch
+0028    SquatWait    Crouching
+0029    SquatRv    Going from crouch to stand
+002A    Landing    Landing state, can be cancelled
+002B    LandingFallSpecial    Landing from special fall
+002C    Attack11    Standard attack 1
+002D    Attack12    Standard attack 2
+002E    Attack13    Standard attack 3
+002F    Attack100Start    Start of a looping standard attack
+0030    Attack100Loop    Middle of a looping standard attack
+0031    Attack100End    End of a looping standard attack
+0032    AttackDash    Dash attack
+0033    AttackS3Hi    High Ftilt
+0034    AttackS3HiS    High-mid Ftilt
+0035    AttackS3S    Mid Ftilt
+0036    AttackS3LwS    Low-mid Ftilt
+0037    AttackS3Lw    Low Ftilt
+0038    AttackHi3    Uptilt
+0039    AttackLw3    Downtilt
+003A    AttackS4Hi    High Fsmash
+003B    AttackS4HiS    High-mid Fsmash
+003C    AttackS4S    Mid Fsmash
+003D    AttackS4LwS    Low-mid Fsmash
+003E    AttackS4Lw    Low Fsmash
+003F    AttackHi4    Upsmash
+0040    AttackLw4    Downsmash
+0041    AttackAirN    Nair
+0042    AttackAirF    Fair
+0043    AttackAirB    Bair
+0044    AttackAirHi    Uair
+0045    AttackAirLw    Dair
+0046    LandingAirN    Landing during Nair
+0047    LandingAirF    Landing during Fair
+0048    LandingAirB    Landing during Bair
+0049    LandingAirHi    Landing during Uair
+004A    LandingAirLw    Landing during Dair
+004B    DamageHi1
+004C    DamageHi2
+004D    DamageHi3
+004E    DamageN1
+004F    DamageN2
+0050    DamageN3
+0051    DamageLw1
+0052    DamageLw2
+0053    DamageLw3
+0054    DamageAir1
+0055    DamageAir2
+0056    DamageAir3
+0057    DamageFlyHi
+0058    DamageFlyN
+0059    DamageFlyLw
+005A    DamageFlyTop
+005B    DamageFlyRoll
+005C    LightGet    Picking up an item
+005D    HeavyGet    Picking up a heavy item (barrel)
+005E    LightThrowF    Throwing items at standard speed
+005F    LightThrowB
+0060    LightThrowHi
+0061    LightThrowLw
+0062    LightThrowDash
+0063    LightThrowDrop
+0064    LightThrowAirF
+0065    LightThrowAirB
+0066    LightThrowAirHi
+0067    LightThrowAirLw
+0068    HeavyThrowF
+0069    HeavyThrowB
+006A    HeavyThrowHi
+006B    HeavyThrowLw
+006C    LightThrowF4    Throwing items at Smash speed
+006D    LightThrowB4
+006E    LightThrowHi4
+006F    LightThrowLw4
+0070    LightThrowAirF4
+0071    LightThrowAirB4
+0072    LightThrowAirHi4
+0073    LightThrowAirLw4
+0074    HeavyThrowF4
+0075    HeavyThrowB4
+0076    HeavyThrowHi4
+0077    HeavyThrowLw4
+0078    SwordSwing1    Beam sword swings
+0079    SwordSwing3
+007A    SwordSwing4
+007B    SwordSwingDash
+007C    BatSwing1    Home Run Bat swings
+007D    BatSwing3
+007E    BatSwing4
+007F    BatSwingDash
+0080    ParasolSwing1    Parasol swings
+0081    ParasolSwing3
+0082    ParasolSwing4
+0083    ParasolSwingDash
+0084    HarisenSwing1    Fan swings
+0085    HarisenSwing3
+0086    HarisenSwing4
+0087    HarisenSwingDash
+0088    StarRodSwing1    Star Rod swings
+0089    StarRodSwing3
+008A    StarRodSwing4
+008B    StarRodSwingDash
+008C    LipStickSwing1    Lip's Stick swings
+008D    LipStickSwing3
+008E    LipStickSwing4
+008F    LipStickSwingDash
+0090    ItemParasolOpen
+0091    ItemParasolFall
+0092    ItemParasolFallSpecial
+0093    ItemParasolDamageFall
+0094    LGunShoot    Raygun shots
+0095    LGunShootAir
+0096    LGunShootEmpty
+0097    LGunShootAirEmpty
+0098    FireFlowerShoot
+0099    FireFlowerShootAir
+009A    ItemScrew
+009B    ItemScrewAir
+009C    DamageScrew
+0009     DamageScrewAir
+009E    ItemScopeStart
+009F    ItemScopeRapid
+00A0    ItemScopeFire
+00A1    ItemScopeEnd
+00A2    ItemScopeAirStart
+00A3    ItemScopeAirRapid
+00A4    ItemScopeAirFire
+00A5    ItemScopeAirEnd
+00A6    ItemScopeStartEmpty
+00A7    ItemScopeRapidEmpty
+00A8    ItemScopeFireEmpty
+00A9    ItemScopeEndEmpty
+00AA    ItemScopeAirStartEmpty
+00AB    ItemScopeAirRapidEmpty
+00AC    ItemScopeAirFireEmpty
+00AD    ItemScopeAirEndEmpty
+00AE    LiftWait
+00AF    LiftWalk1
+00B0    LiftWalk2
+00B1    LiftTurn
+00B2    GuardOn
+00B3    Guard    Holding shield
+00B4    GuardOff
+00B5    GuardSetOff    Shield stun
+00B6    GuardReflect
+00B7    DownBoundU    The "failed to tech" bounce, facing up
+00B8    DownWaitU    Laying on ground facing up
+00B9    DownDamageU    Getting hit laying on ground facing up
+00BA    DownStandU
+00BB    DownAttackU    Get up attack from ground face up
+00BC    DownFowardU
+00BD    DownBackU
+00BE    DownSpotU
+00BF    DownBoundD    The "failed to tech" bounce, facing down
+00C0    DownWaitD
+00C1    DownDamageD
+00C2    DownStandD
+00C3    DownAttackD
+00C4    DownFowardD
+00C5    DownBackD
+00C6    DownSpotD
+00C7    Passive    Neutral tech
+00C8    PassiveStandF    Forward tech
+00C9    PassiveStandB    Backward tech
+00CA    PassiveWall    Wall tech
+00CB    PassiveWallJump    Walljump tech/plain walljump
+00CC    PassiveCeil    Ceiling tech
+00CD    ShieldBreakFly
+00CE    ShieldBreakFall
+00CF    ShieldBreakDownU
+00D0    ShieldBreakDownD
+00D1    ShieldBreakStandU
+00D2    ShieldBreakStandD
+00D3    FuraFura    Shield-break tottering
+00D4    Catch    Grab
+00D5    CatchPull    Successfully grabbing a character - pulling them in
+00D6    CatchDash
+00D7    CatchDashPull
+00D8    CatchWait    Grabbing and holding a character
+00D9    CatchAttack    Pummel
+00DA    CatchCut    When opponent breaks of a character's grab
+00DB    ThrowF
+00DC    ThrowB
+00DD    ThrowHi
+00DE    ThrowLw
+00DF    CapturePulledHi
+00E0    CaptureWaitHi
+00E1    CaptureDamageHi
+00E2    CapturePulledLw
+00E3    CaptureWaitLw
+00E4    CaptureDamageLw
+00E5    CaptureCut
+00E6    CaptureJump
+00E7    CaptureNeck
+00E8    CaptureFoot
+00E9    EscapeF
+00EA    EscapeB
+00EB    Escape
+00EC    EscapeAir    airdodge
+00ED    ReboundStop
+00EE    Rebound
+00EF    ThrownF
+00F0    ThrownB
+00F1    ThrownHi
+00F2    ThrownLw
+00F3    ThrownLwWomen
+00F4    Pass    Drop through platform
+00F5    Ottotto    Ledge teeter
+00F6    OttottoWait
+00F7    FlyReflectWall
+00F8    FlyReflectCeil
+00F9    StopWall
+00FA    StopCeil
+00FB    MissFoot
+00FC    CliffCatch    Catching the ledge
+00FD    CliffWait    Hanging on the ledge
+00FE    CliffClimbSlow    Climbing the ledge, >100%
+00FF    CliffClimbQuick    Climbing the ledge, <100%
+0100    CliffAttackSlow    Ledge attack, >100%
+0101    liffAttackQuick    Ledge attack, <100%
+0102    CliffEscapeSlow    Ledge roll, >100%
+0103    CliffEscapeQuick    Ledge roll, <100%
+0104    CliffJumpSlow1
+0105    CliffJumpSlow2
+0106    CliffJumpQuick1
+0107    CliffJumpQuick2
+0108    AppealR    Taunt right
+0109    AppealL    Taunt left
+010A    ShoulderedWait
+010B    ShoulderedWalkSlow
+010C    ShoulderedWalkMiddle
+010D    ShoulderedWalkFast
+010E    ShoulderedTurn
+010F    ThrownFF
+0110    ThrownFB
+0111    ThrownFHi
+0112    ThrownFLw
+0113    CaptureCaptain
+0114    CaptureYoshi
+0115    YoshiEgg
+0116    CaptureKoopa
+0117    CaptureDamageKoopa
+0118    CaptureWaitKoopa
+0119    ThrownKoopaF
+011A    ThrownKoopaB
+011B    CaptureKoopaAir
+011C    CaptureDamageKoopaAir
+011D    CaptureWaitKoopaAir
+011E    ThrownKoopaAirF
+011F    ThrownKoopaAirB
+0120    CaptureKirby
+0121    CaptureWaitKirby
+0122    ThrownKirbyStar
+0123    ThrownCopyStar
+0124    ThrownKirby
+0125    BarrelWait
+0126    Bury
+0127    BuryWait
+0128    BuryJump
+0129    DamageSong
+012A    DamageSongWait
+012B    DamageSongRv
+012C    DamageBind
+012D    CaptureMewtwo
+012E    CaptureMewtwoAir
+012F    ThrownMewtwo
+0130    ThrownMewtwoAir
+0131    WarpStarJump
+0132    WarpStarFall
+0133    HammerWait
+0134    HammerWalk
+0135    HammerTurn
+0136    HammerKneeBend
+0137    HammerFall
+0138    HammerJump
+0139    HammerLanding
+013A    KinokoGiantStart    Super/Poison mushroom states
+013B    KinokoGiantStartAir
+013C    KinokoGiantEnd
+013D    KinokoGiantEndAir
+013E    KinokoSmallStart
+013F    KinokoSmallStartAir
+0140    KinokoSmallEnd
+0141    KinokoSmallEndAir
+0142    Entry    Warp in at beginning of match.
+0143    EntryStart
+0144    EntryEnd
+0145    DamageIce
+0146    DamageIceJump
+0147    CaptureMasterhand
+0148    CapturedamageMasterhand
+0149    CapturewaitMasterhand
+014A    ThrownMasterhand
+014B    CaptureKirbyYoshi
+014C    KirbyYoshiEgg
+014D    CaptureLeadead
+014E    CaptureLikelike
+014F    DownReflect
+0150    CaptureCrazyhand
+0151    CapturedamageCrazyhand
+0152    CapturewaitCrazyhand
+0153    ThrownCrazyhand
+0154    BarrelCannonWait
+0155    Wait1
+0156    Wait2
+0157    Wait3
+0158    Wait4
+0159    WaitItem
+015A    SquatWait1
+015B    SquatWait2
+015C    SquatWaitItem
+015D    GuardDamage
+015E    EscapeN
+015F    AttackS4Hold
+0160    HeavyWalk1
+0161    HeavyWalk2
+0162    ItemHammerWait
+0163    ItemHammerMove
+0164    ItemBlind
+0165    DamageElec
+0166    FuraSleepStart
+0167    FuraSleepLoop
+0168    FuraSleepEnd
+0169    WallDamage
+016A    CliffWait1
+016B    CliffWait2
+016C    SlipDown
+016D    Slip
+016E    SlipTurn
+016F    SlipDash
+0170    SlipWait
+0171    SlipStand
+0172    SlipAttack
+0173    SlipEscapeF
+0174    SlipEscapeB
+0175    AppealS
+0176    Zitabata
+0177    CaptureKoopaHit
+0178    ThrownKoopaEndF
+0179    ThrownKoopaEndB
+017A    CaptureKoopaAirHit
+017B    ThrownKoopaAirEndF
+017C    ThrownKoopaAirEndB
+017D    ThrownKirbyDrinkSShot
+017E    ThrownKirbySpitSShot

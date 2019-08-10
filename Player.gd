@@ -44,6 +44,8 @@ var is_fastfalling = false
 
 var jump_timer = 0
 
+var is_crouching = false
+
 # Melee states to work on
 # idle
 # jumpsquat
@@ -54,7 +56,7 @@ var jump_timer = 0
 
 
 func _physics_process(delta):
-    print(jump_squat_timer)
+    print(is_crouching)
     should_apply_gravity = true
     
     calculate_x_velocity()
@@ -123,9 +125,16 @@ func calculate_x_velocity():
 func handle_down_press():
     if !snap and velocity.y > 0:
             is_fastfalling = true
+    
+    if snap:
+        if move_dir != 0:
+            move_dir = 0
+        is_crouching = true
+
 
 func handle_down_release():
-    
+    if snap:
+        is_crouching = false
 
 func handle_jump():
     if is_on_floor():
@@ -175,8 +184,11 @@ func move():
     
     if is_on_floor():
         velocity.y = 0
+        if move_dir != 0 and is_crouching:
+            is_crouching = false
     else:
         snap = false
+        is_crouching = false
     
     var just_landed := is_on_floor() and not snap
     if just_landed:
@@ -208,6 +220,9 @@ func do_animation():
         if jump_squat_timer:
             state = STATE.JUMP_SQUAT
             play_anim("squat")
+        elif is_crouching:
+            state = STATE.CROUCH
+            play_anim("crouch")
         elif move_dir == 0:
             state = STATE.IDLE
             play_anim("idle")

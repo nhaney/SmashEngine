@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Tilesheet/tilesheet_complete.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -54,6 +54,22 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 27.8157 )
 
+[sub_resource type="Animation" id=8]
+resource_name = "crouch"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 22 ]
+}
+
 [sub_resource type="Animation" id=5]
 resource_name = "idle"
 length = 0.4
@@ -74,7 +90,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=6]
 resource_name = "jump"
 length = 0.7
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -85,7 +100,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 43, 44, 45, 46, 47, 48, 52 ]
+"values": [ 48, 52, 43, 44, 45, 46, 47 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -128,9 +143,10 @@ position = Vector2( 1, 0 )
 texture = ExtResource( 3 )
 vframes = 9
 hframes = 8
-frame = 48
+frame = 47
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/crouch = SubResource( 8 )
 anims/idle = SubResource( 5 )
 anims/jump = SubResource( 6 )
 anims/squat = SubResource( 7 )
