@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platformer_sprites_base.png-885c4d7acd3d112a576e13f81cf511e9.stex"
+path="res://.import/platformer_sprites_base.png-8cc2ba3e19e812b72ef35284ed6d937a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character_sprite/platformer_sprites_base.png"
-dest_files=[ "res://.import/platformer_sprites_base.png-885c4d7acd3d112a576e13f81cf511e9.stex" ]
+source_file="res://player/characters/default/character_sprite/platformer_sprites_base.png"
+dest_files=[ "res://.import/platformer_sprites_base.png-8cc2ba3e19e812b72ef35284ed6d937a.stex" ]
 
 [params]
 

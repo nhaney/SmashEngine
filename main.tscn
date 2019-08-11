@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Tilesheet/tilesheet_complete.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://character_sprite/platformer_sprites_base.png" type="Texture" id=3]
+[ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://player/characters/default/character_sprite/platformer_sprites_base.png" type="Texture" id=3]
 [ext_resource path="res://main.tres" type="Animation" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -54,7 +54,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 27.8157 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "crouch"
 length = 0.1
 tracks/0/type = "value"
@@ -70,8 +70,7 @@ tracks/0/keys = {
 "values": [ 22 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "idle"
+[sub_resource type="Animation" id=6]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -87,8 +86,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "jump"
+[sub_resource type="Animation" id=7]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -103,8 +101,7 @@ tracks/0/keys = {
 "values": [ 48, 52, 43, 44, 45, 46, 47 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "squat"
+[sub_resource type="Animation" id=8]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -146,8 +143,8 @@ hframes = 8
 frame = 47
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-anims/crouch = SubResource( 8 )
-anims/idle = SubResource( 5 )
-anims/jump = SubResource( 6 )
-anims/squat = SubResource( 7 )
+anims/crouch = SubResource( 5 )
+anims/idle = SubResource( 6 )
+anims/jump = SubResource( 7 )
+anims/squat = SubResource( 8 )
 anims/walk = ExtResource( 4 )
